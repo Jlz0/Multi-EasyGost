@@ -96,10 +96,10 @@ function Install_ct() {
   read -e -p "是否使用？[y/n]:" addyn
   [[ -z ${addyn} ]] && addyn="n"
   if [[ ${addyn} == [Yy] ]]; then
-    rm -rf gost-linux-"$bit"-"$ct_new_ver".gz
+    rm -rf gost_"$ct_new_ver"_linux_"$bit".tar.gz
     wget --no-check-certificate https://cdn.paimom.cn/Multi-EasyGost/gost_"$ct_new_ver"_linux_"$bit".tar.gz
-    gunzip gost-linux-"$bit"-"$ct_new_ver".gz
-    mv gost-linux-"$bit"-"$ct_new_ver" gost
+    tar zxvf gost_"$ct_new_ver"_linux_"$bit".tar.gz
+    mv gost_"$ct_new_ver"_linux_"$bit" gost
     mv gost /usr/bin/gost
     chmod -R 777 /usr/bin/gost
     wget --no-check-certificate https://cdn.paimom.cn/Multi-EasyGost/gost.service && chmod -R 777 gost.service && mv gost.service /usr/lib/systemd/system
