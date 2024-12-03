@@ -101,7 +101,7 @@ function Install_ct() {
     rm -rf README.md
     rm -rf gost_"$ct_new_ver"_linux_"$bit".tar.gz
     wget --no-check-certificate https://gotunnel.oss-cn-shenzhen.aliyuncs.com/gost_"$ct_new_ver"_linux_"$bit".tar.gz
-    tar zxvf gost_"$ct_new_ver"_linux_"$bit".tar.gz -C gost_"$ct_new_ver"_linux_"$bit"
+    tar zxvf gost_"$ct_new_ver"_linux_"$bit".tar.gz
     mv gost_"$ct_new_ver"_linux_"$bit" gost
     mv gost /usr/bin/gost
     chmod -R 777 /usr/bin/gost
@@ -113,7 +113,7 @@ function Install_ct() {
     rm -rf README.md
     rm -rf gost_"$ct_new_ver"_linux_"$bit".tar.gz
     wget --no-check-certificate https://github.com/ginuerzh/gost/releases/download/v"$ct_new_ver"/gost_"$ct_new_ver"_linux_"$bit".tar.gz
-    tar zxvf gost_"$ct_new_ver"_linux_"$bit".tar.gz -C gost_"$ct_new_ver"_linux_"$bit"
+    tar zxvf gost_"$ct_new_ver"_linux_"$bit".tar.gz
     mv gost_"$ct_new_ver"_linux_"$bit" gost
     mv gost /usr/bin/gost
     chmod -R 777 /usr/bin/gost
